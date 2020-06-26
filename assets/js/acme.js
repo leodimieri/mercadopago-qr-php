@@ -269,7 +269,7 @@ $(document).ready(function() {
 ///////////////////////////////////////////////////////////////////////////
 	function fillCountrySelector(){
 
-		$.get("https://api.mercadolibre.com/countries",function(countries){
+		$.get("https://api.mercadolibre.com/countries", function(countries){
 			$('#country').html("<option>Selecciona el país...</option>");
 
 			for(country in countries){
