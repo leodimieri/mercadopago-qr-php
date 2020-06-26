@@ -269,13 +269,22 @@ $(document).ready(function() {
 ///////////////////////////////////////////////////////////////////////////
 	function fillCountrySelector(){
 
-		$.get("https://api.mercadolibre.com/countries", function(countries){
-			$('#country').html("<option>Selecciona el país...</option>");
+		// $.get("https://api.mercadolibre.com/countries", function(countries){
+		// 	$('#country').html("<option>Selecciona el país...</option>");
 
-			for(country in countries){
-				$('#country').append("<option value='"+countries[country].id+"'>"+countries[country].name+"</option>");
-			}
-		});
+		// 	for(country in countries){
+		// 		$('#country').append("<option value='"+countries[country].id+"'>"+countries[country].name+"</option>");
+		// 	}
+		// });
+		axios.get("https://api.mercadolibre.com/countries")
+			.then(function(res) {
+				var countries = res.data;
+				$('#country').html("<option>Selecciona el país...</option>");
+
+				for(country in countries){
+					$('#country').append("<option value='"+countries[country].id+"'>"+countries[country].name+"</option>");
+				}
+			})
 
 	}; // 
 
