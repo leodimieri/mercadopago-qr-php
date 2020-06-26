@@ -113,7 +113,7 @@ ORDEN:
    - notification_url: Este campo debe tener una url correcta. El servicio de recepción de notificacinones deberá ser accesible públicamente por inernet.
    - El monto total de la orden debe coincidir con $ 660.
 
-
+ 
 
 (*) Tarjetas de crédito para pruebas: 
 ---------------------------------
