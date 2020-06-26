@@ -341,7 +341,6 @@ $(document).ready(function() {
 				street_name: streetName,
 				city_name: city,
 				state_name: state,
-				country_name: country,
 				latitude: latitude,
 				longitude: longitude,
 				reference: addressReference
