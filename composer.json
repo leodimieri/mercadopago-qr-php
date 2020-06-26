@@ -1,0 +1,10 @@
+{
+    "name": "hadas/mercadopago-qr-php",
+    "authors": [
+        {
+            "name": "leodimieri",
+            "email": "leodimieri@gmail.com"
+        }
+    ],
+    "require": {}
+}
