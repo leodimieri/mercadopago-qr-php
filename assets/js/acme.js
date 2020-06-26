@@ -378,7 +378,7 @@ $(document).ready(function() {
 		var posJSON = {
 			"name":posName,
 			"external_store_id":externalStoreID,
-			"fixed_amount":false,
+			"fixed_amount":true,
 			"category":category,
 			"external_id":externalPOSID
 		};
