@@ -75,7 +75,7 @@ $(document).ready(function() {
 					// para recibir las notificaciones en tu endpoint público.
 
 					var orderJSON ={"external_reference": external_reference,
-									"notification_url": "",
+									"notification_url": "https://hookb.in/XkGkrzVdxnUGBBm3JB2n",
 									"items" : items
 									};
 
@@ -325,7 +325,20 @@ $(document).ready(function() {
 		// REVISA AQUÍ:
 		// Modifica el storeJSON con la estructura necesaria para crear una Store correctamente.
 
-		var storeJSON = {}
+		var storeJSON = {
+			name: storeName,
+			location: {
+				street_number: streetNumber,
+				street_name: streetName,
+				city_name: city,
+				state_name: state,
+				country_name: country,
+				latitude: latitude,
+				longitude: longitude,
+				reference: addressReference
+			},
+			external_id: externalStoreID
+		}
 
 		console.log(storeJSON);
 		$.post("api/store/create/",{json:JSON.stringify(storeJSON)},function(results){
@@ -347,18 +360,20 @@ $(document).ready(function() {
 
 		// REVISA AQUÍ:
 
-		var category = 1;   // Agrega aquí el número de categoría o MCC necesario para 
+		var category = 621102;   // Agrega aquí el número de categoría o MCC necesario para 
 							// Identificar al POS de restaurante
 
 
 		// REVISA AQUÍ:
 		// Comprueba que el posJSON sea el adecuado para crear un POS integrado correctamente.
 
-		var posJSON ={"name":posName,
-					"external_store_id":externalStoreID,
-					"fixed_amount":false,
-					"category_id":category,
-					"external_id":externalPOSID};
+		var posJSON = {
+			"name":posName,
+			"external_store_id":externalStoreID,
+			"fixed_amount":false,
+			"category":category,
+			"external_id":externalPOSID
+		};
 
 
 
@@ -385,7 +400,7 @@ var items = [{
 		    "picture_url":"https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242",
 		    "description" : "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.",
 		    "unit_price" : 90,
-		    "quantity" : 1
+		    "quantity" : 2
 		  },
 		  {
 		  	"id":"sku011",
