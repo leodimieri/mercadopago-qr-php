@@ -74,10 +74,11 @@ $(document).ready(function() {
 					// Agrega la URL notification_url 
 					// para recibir las notificaciones en tu endpoint público.
 
-					var orderJSON ={"external_reference": external_reference,
-									"notification_url": "https://hookb.in/XkGkrzVdxnUGBBm3JB2n",
-									"items" : items
-									};
+					var orderJSON ={
+						"external_reference": external_reference,
+						"notification_url": "https://mercaopago-qr-php.herokuapp.com/order/status",
+						"items" : items
+					};
 
 					// Crea orden en base al external_id de la página
 
