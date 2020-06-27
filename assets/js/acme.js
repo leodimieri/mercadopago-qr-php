@@ -58,7 +58,7 @@ $(document).ready(function() {
 		    // Muestra el código QR del punto de venta seleccionado
 
 		    // Llama al servicio de obtención de información de un POS/QR en base al external_pos_id o también llamado external_id
-			$.get("api/pos/get/",{"external_id":external_id},function(data){
+			$.get("api/pos/get/",{"external_id": external_id},function(data){
 				console.log("Obtención información de QR:");
 				console.log(data);
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 					var orderJSON ={
 						"external_reference": external_reference,
-						"notification_url": "https://mercaopago-qr-php.herokuapp.com/order/status",
+						"notification_url": "https://mercaopago-qr-php.herokuapp.com/notifications/",
 						"items" : items
 					};
 
@@ -103,7 +103,7 @@ $(document).ready(function() {
 
 							// Comprueba estado del pago vía Seach de Merchant_order
 
-							$.get("api/order/status/", {"external_reference":external_reference},function(data){
+							$.get("api/order/status/", {"external_reference":external_reference}, function(data){
 								
 								console.log("Search de Merchant_order:");
 								console.log(data);
