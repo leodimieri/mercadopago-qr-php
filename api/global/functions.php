@@ -2,6 +2,7 @@
 
 // REVISA AQUÍ:
 // Agrega el access_token que se indica en el ejercicio así como el collector_id y el country_id
+global $access_token,$collector_id,$notificationJSON,$country_id;
 
 $access_token="APP_USR-7026946692817220-061822-8b7c9e20631faac22d9e4cfa92a37265-586728271";
 $collector_id=586728271;
@@ -11,8 +12,6 @@ $country_id="MLA";
 $integrator_id_test="XXXXXXX"; 
 
 $notificationJSON="";
-global $access_token,$collector_id,$notificationJSON,$country_id;
-
 
 
 // Función para hacer llamadas a la API

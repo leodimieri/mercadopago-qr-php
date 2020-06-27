@@ -5,7 +5,7 @@
 header('Content-type: application/json');
 
 include_once '../../global/functions.php';
-global $access_token,$collector_id;
+global $access_token, $collector_id;
 
 $external_reference = $_REQUEST["external_reference"];
 
