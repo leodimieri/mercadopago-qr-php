@@ -7,7 +7,7 @@ header('Content-type: application/json');
 include_once '../../global/functions.php';
 global $access_token,$collector_id;
 
-$external_reference = $_REQUEST["external_reference"];
+$external_reference = $_POST["external_reference"];
 
 $url = "https://api.mercadopago.com/merchant_orders";
  
