@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 					var orderJSON ={
 						"external_reference": external_reference,
-						"notification_url": "https://mercaopago-qr-php.herokuapp.com/notifications/",
+						"notification_url": "https://hookb.in/r1N13kr8epUzWWJVyW71",
 						"items" : items
 					};
 

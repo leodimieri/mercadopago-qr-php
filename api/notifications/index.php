@@ -49,7 +49,7 @@ if($n==2){
 	echo $resource;
 
 
-}else{
+} else{
 	
 	// Si llegase otro tipo de notificación igual responderá http 200 pero no hará nada.
 
